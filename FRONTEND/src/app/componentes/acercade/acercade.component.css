@@ -1,0 +1,39 @@
+div{
+    background-color: rgb(125, 181, 202);
+}
+
+.profile-image{
+    top: 300px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index:3;
+    box-shadow: 3px 3px 3px gray;
+    border-color: white;
+    margin-top: -150px;
+    }
+
+.row{
+padding: 15px;
+}
+
+#info-name {
+font-weight: bold;
+margin: auto;
+text-align:justify;
+}
+
+#info-company{
+text-align: justify;
+margin: 10% 10% 10% 10%;
+font-style: italic;
+font-size: large;
+}
+#acercaDeMi{
+text-align: justify;
+margin: auto;
+}
+p{
+    font-weight: bold;
+}
+
