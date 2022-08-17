@@ -31,18 +31,19 @@
 
             <!-- Usuario input -->
             <div class="form-outline mb-4">
-              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" required />
-              <label class="form-label" for="form2Example1">Usuari@</label>
+              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" 
+              [(ngModel)]="nombreUsuario" required />
+              <label class="form-label" for="nombreUsuario" >Usuari@</label>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
               <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password" required/>
-              <label class="form-label" for="form2Example2">Contraseña / Password</label>
+              <label class="form-label" for="password">Contraseña / Password</label>
             </div>
 
             <!-- Submit button -->
-            <button type="button" class="btn btn-outline-success btn-block mb-4 ">Iniciar / Sign in</button> <br>
+            <button type="submit" class="btn btn-outline-success btn-block mb-4 ">Iniciar / Sign in</button> <br>
 
             <!-- 2 column grid layout for inline styling -->
             <div class="row mb-4">
@@ -50,13 +51,13 @@
                 <!-- Checkbox -->
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                  <label class="form-check-label" for="form2Example31"> Recordarme / Remember me </label>
+                  <label class="form-check-label" for="form2Example31"> Recordarme / Remember-me </label>
                 </div>
               </div>
 
               <div class="col">
-                <!-- Simple link -->
-                <a href="#!">Olvidaste tu contraseña? / Forgot password?</a>
+                <!-- Simple link 
+                <a href="#!">Olvidaste tu contraseña? / Forgot password?</a> -->
               </div>
             </div>
 

@@ -7,7 +7,6 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { ExperiencesComponent } from './componentes/experiences/experiences.component';
 import { FormsModule } from '@angular/forms';
-import { ExperienceComponent } from './componentes/experience/experience.component';
 import { EducacionComponent } from './componentes/acercade/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './componentes/hys/hys.component';
@@ -16,6 +15,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClient , HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { interceptorProvider } from './services/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiences/new-experiencia.component';
+import { EditexperienciaComponent } from './componentes/experiences/editexperiencia.component';
 
 
 
@@ -26,12 +28,13 @@ import { LoginComponent } from './componentes/login/login.component';
     AcercadeComponent,
     EducacionComponent,
     ExperiencesComponent,
-    ExperienceComponent,
     HysComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    NewExperienciaComponent,
+    EditexperienciaComponent,
       ],
   imports: [
     BrowserModule,
@@ -40,7 +43,10 @@ import { LoginComponent } from './componentes/login/login.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

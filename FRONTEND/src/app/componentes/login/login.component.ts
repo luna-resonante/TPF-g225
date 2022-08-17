@@ -9,15 +9,16 @@ import { TokenService } from 'src/app/services/token.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-isLogged = false;
-isLogginFail = false;
-loginUsuario! : LoginUsuario;
-nombreUsuario! : string; 
-password! : string; 
-roles : string[] = [];
-errMsj! : string; 
 
+export class LoginComponent implements OnInit {
+  
+ isLogged = false;
+ isLogginFail = false;
+ loginUsuario! : LoginUsuario;
+ nombreUsuario! : string;
+ password! : string;
+ roles : string [] = [];
+ errMsj! : string;
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -41,7 +42,7 @@ errMsj! : string;
       this.router.navigate([''])
     }, err => {
       this.isLogged = false;
-      this.isLogginFail = false; 
+      this.isLogginFail = true; 
       this.errMsj = err.error.mensaje;
       console.log(this.errMsj);
       
