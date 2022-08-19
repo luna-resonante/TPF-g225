@@ -18,6 +18,8 @@ import { LoginComponent } from './componentes/login/login.component';
 import { interceptorProvider } from './services/interceptor-service';
 import { NewExperienciaComponent } from './componentes/experiences/new-experiencia.component';
 import { EditexperienciaComponent } from './componentes/experiences/editexperiencia.component';
+import { NeweducacionComponent } from './componentes/acercade/educacion/neweducacion.component';
+import { EditeducacionComponent } from './componentes/acercade/educacion/editeducacion.component';
 
 
 
@@ -35,6 +37,8 @@ import { EditexperienciaComponent } from './componentes/experiences/editexperien
     LoginComponent,
     NewExperienciaComponent,
     EditexperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
       ],
   imports: [
     BrowserModule,

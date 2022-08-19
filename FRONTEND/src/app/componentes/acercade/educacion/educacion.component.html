@@ -1,17 +1,29 @@
 <div class="row">
-    <h2>ESTUDIOS</h2>
-    <div class="col-lg-11">
-      <ul>
-        <li><h3>Estudio 1</h3> - <h5>(year)</h5></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis nemo labore odit doloremque animi maxime, sit alias, amet quae autem asperiores ut quaerat hic delectus saepe error ea dolores.</p>
-      </ul>
-      <ul>
-        <li><h3>Estudio 2</h3> - <h5>(year)</h5></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis nemo labore odit doloremque animi maxime, sit alias, amet quae autem asperiores ut quaerat hic delectus saepe error ea dolores.</p>
-      </ul>
-      <ul>
-        <li><h3>Estudio 3</h3> - <h5>(year)</h5></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis nemo labore odit doloremque animi maxime, sit alias, amet quae autem asperiores ut quaerat hic delectus saepe error ea dolores.</p>
-      </ul>
-    </div>
+  <h2>EDUCACIÓN</h2>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">
+      Nueva educación
+    </button>
   </div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngForm="let Educacion of educacion">
+          <td>
+            <h3>{{Educacion.nombreE}}</h3>
+          </td>
+          <td>{{Educacion.descripcionE}}</td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+              <i class="bi bi-pencil"></i>Editar</button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-dark" (click)="delete(Educacion.id)">  
+              <i class="bi bi-pencil"></i>Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
