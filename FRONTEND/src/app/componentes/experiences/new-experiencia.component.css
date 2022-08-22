@@ -1,0 +1,26 @@
+div{
+    background-color: black;
+    }
+
+.form-label {
+    color: white;
+    font-weight:lighter;
+    font-size:large;
+}
+.form-check-label{
+    color: white;
+    font-weight:lighter;
+    font-size:large;
+}
+.col{
+    color: white;
+    font-weight:lighter;
+    font-size:large;
+}
+.btn {
+    font-size:large;
+         color: rgb(125, 181, 202);
+         text-align:center;
+         display: flex;
+         margin-right: auto;
+}

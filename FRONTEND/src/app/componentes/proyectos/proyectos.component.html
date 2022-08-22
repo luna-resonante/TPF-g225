@@ -1,13 +1,29 @@
 <div class="row">
     <h2>PROYECTOS</h2>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-light" routerLink="/nuevoproyecto" *ngIf="isLogged">
+        Nuevo proyecto
+      </button>
+    </div>
     <div class="col-lg-11">
-      <ul>
-        <li><h3>Proyecto 1</h3> - <h5>(year)</h5></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis nemo labore odit doloremque animi maxime, sit alias, amet quae autem asperiores ut quaerat hic delectus saepe error ea dolores.</p>
-      </ul>
-      <ul>
-        <li><h3>Proyecto 2</h3> - <h5>(year)</h5></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis nemo labore odit doloremque animi maxime, sit alias, amet quae autem asperiores ut quaerat hic delectus saepe error ea dolores.</p>
-      </ul>
-      </div>
-</div>
+      <table class="table">
+        <tbody>
+          <tr *ngForm="let Experience of expe">
+            <td>
+              <h3>{{Experience.nombreE}}</h3>
+            </td>
+            <td>{{Experience.descripcionE}}</td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editprotect/{{Experience.id}}">
+                <i class="bi bi-pencil"></i>Editar</button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-dark" (click)="delete(Experience.id)">  
+                <i class="bi bi-pencil"></i>Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  </div>
