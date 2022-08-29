@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("educacion")
+@RequestMapping("/educacion")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
 
@@ -69,18 +69,18 @@ public class CEducacion {
         educacion.setDescripcionE((dtoeducacion.getDescripcionE()));
         
         sEducacion.save(educacion);
-        return new ResponseEntity (new Mensaje("Educación actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación actualizada"), HttpStatus.OK);
                 
     }
     
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete (@PathVariable("id")int id){
+    public ResponseEntity<?> delete(@PathVariable("id")int id){
         if(!sEducacion.existsById(id))
-            return new ResponseEntity (new Mensaje("El ID no existe"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.NOT_FOUND);
         
         sEducacion.delete(id);
         
-        return new ResponseEntity (new Mensaje("Educación eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación eliminada"), HttpStatus.OK);
         
     }
 }
