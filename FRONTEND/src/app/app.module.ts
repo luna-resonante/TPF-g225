@@ -12,7 +12,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './componentes/hys/hys.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { HttpClient , HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { interceptorProvider } from './services/interceptor-service';
